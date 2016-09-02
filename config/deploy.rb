@@ -1,12 +1,15 @@
+#byd
+
+
 # config valid only for current version of Capistrano
 lock '3.6.0'
 
-server '58.251.74.101', port: 9999, roles: [:web, :app, :db], primary: true
+server '118.178.56.12', port: 22, roles: [:web, :app, :db], primary: true
 
 
-set :application, 'clouwebsite'
-set :repo_url, 'https://github.com/xyixyi/clouwebsite.git'
-set :user,            'root'
+set :application, 'bydweb'
+set :repo_url, 'https://github.com/ryrbsd/hdcarauto.git'
+set :user,            'deploy'
 set :puma_threads,    [4, 16]
 set :puma_workers,    0
 
@@ -68,7 +71,7 @@ set :puma_init_active_record, true  # Change to false when not using ActiveRecor
 # set :linked_dirs,  %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/system}
 
 # files we want symlinking to specific entries in shared.
-set :linked_files, %w{config/database.yml db/production.sqlite3}
+set :linked_files, %w{config/database.yml}
 
 # dirs we want symlinking to shared
 set :linked_dirs, %w{bin log tmp/pids tmp/cache tmp/sockets vendor/bundle public/uploads public/videos public/uploadfiles}
