@@ -339,7 +339,7 @@ h1 {
 
 .carousel-inner {
     height: 700px;
-    padding: 0 50px;
+    padding: 0;
 }
 
 .glyphicon-menu-right {
