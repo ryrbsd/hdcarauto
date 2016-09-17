@@ -4,7 +4,8 @@
 [![Test Coverage](https://codeclimate.com/github/xyixyi/clouwebsite/badges/coverage.svg)](https://codeclimate.com/github/xyixyi/clouwebsite/coverage)
 [![Issue Count](https://codeclimate.com/github/xyixyi/clouwebsite/badges/issue_count.svg)](https://codeclimate.com/github/xyixyi/clouwebsite)
 
-https://ryr-works-ryrbsd.c9users.io/users/sign_in
+https://raoyiran-ryrbsd.c9users.io/users/sign_in
+https://raoyiran-ryrbsd.c9users.io/
 
 如果上传图片的时候出现错误：Original Error: ImageMagick/GraphicsMagick is not installed
 run:
@@ -19,7 +20,7 @@ sudo apt-get install imagemagick --fix-missing
 #Setting up elasticsearch for multiple models
 
 Here is the code to install and start elastic search. [reference]
-
+rails s -p $PORT -b $IP
 ```sh
 # Firstly, uninstall:
 sudo apt-get --purge autoremove elasticsearch

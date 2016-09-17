@@ -15,9 +15,9 @@ user1.authorized = true
 user1.save!
 
 user3 = User.new
-user3.email = 'root@szclou.com'
-user3.password = 'rootszclou'
-user3.password_confirmation = 'rootszclou'
+user3.email = 'root@hdbyd.com'
+user3.password = 'rootbyd'
+user3.password_confirmation = 'rootbyd'
 user3.role = 'developer'
 user3.authorized = true
 user3.save!

@@ -112,6 +112,7 @@ hr {
 .colorchange {
     position: relative;
     width: 100%;
+    bottom: -30px;
     height: 16px;
     /* 底色 */
     background-color: #063053;
@@ -272,6 +273,7 @@ hr {
 
 .copyright {
     height: 70px;
+    bottom: -30px;
     position: relative;
     width:100%;
     background-color: #F2F2F2;
