@@ -4,7 +4,7 @@
 [![Test Coverage](https://codeclimate.com/github/xyixyi/clouwebsite/badges/coverage.svg)](https://codeclimate.com/github/xyixyi/clouwebsite/coverage)
 [![Issue Count](https://codeclimate.com/github/xyixyi/clouwebsite/badges/issue_count.svg)](https://codeclimate.com/github/xyixyi/clouwebsite)
 
-
+https://ryr-works-ryrbsd.c9users.io/users/sign_in
 
 如果上传图片的时候出现错误：Original Error: ImageMagick/GraphicsMagick is not installed
 run:
