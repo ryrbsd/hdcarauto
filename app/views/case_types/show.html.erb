@@ -1,16 +1,16 @@
 <!--qtypes#show-->
 <link rel="stylesheet" type="text/css" href="/css/products.css">
 <div class="leftmenu">
-    <h5>客服案例</h5>
+    <h5><%= @type.name%></h5>
     <hr class="hr">
     <ul>
         <% counter = 1%>
-        <% @case_types.each do |type| %>
+        <% @papers.each do |paper| %>
         <li>
-            <% if type.name == @type.name%>
-                <%= link_to(type.name, q_type_path(:id => type.id), id: "first_field", class: "typeslink") %>
+            <% if counter == 1%>
+                <%= link_to(paper.title, service_case_path(:id => paper.id), id: "first_field", class: "typeslink") %>
             <% else %>
-                <%= link_to(type.name, q_type_path(:id => type.id), class: "typeslink") %>
+                <%= link_to(paper.title, service_case_path(:id => paper.id), class: "typeslink") %>
             <% end %>
             
         </li>
@@ -22,25 +22,12 @@
 </div>
 <div class="rightproducts">
     <div class="title">
-        <h6><%= @type.name%></h6>
+        <h6><%= @firstpaper.title%></h6>
         <hr class="righthr">
     </div>
+    <div class="text-field"><%= @firstpaper.text.html_safe%></div>
     
-    <% if @cases != nil%>
-    <ul class="products_list current" id="1">
-        <%@cases.each do |service|%>
-            <li>
-                <div class="product"><div class="productimage" style="background: url(<%= service.image%>);">
-                
-                </div>
-                <div class="text-field">
-                    <%= link_to(service.title, service_case_path(:id => service.id), class: "producttitle")%></div>
-                </div>
-            </li>
-        <%end%>
-    </ul>
-    <%= will_paginate @cases,:previous_label => '上一页',:next_label=> '下一页' %>
-    <% end %>
+    
 </div>
 
 

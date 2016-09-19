@@ -1,6 +1,7 @@
 <!--Title of Home page-->
 <title>CLOU Home</title>
 <link rel="stylesheet" type="text/css" href="/css/index.css">
+<!--<link rel="stylesheet" type="text/css" href="/css/products.css">-->
 <body>
     <div class="product-show">
         <div id="myCarousel" class="carousel contain slide" data-ride="carousel">
@@ -23,14 +24,11 @@
               </a>
             <%else%>
       
-              <div class="item" style="background:url('<%= product.image%>');">
+              <a class="item" style="background:url('<%= product.image%>');" href="pop_product/<%= product.id%>">
 
-                <div class="carousel-caption">
-                  <!--这里要能点进去-->
-                  <%= link_to(product.name, pop_product_path(:id => product.id), class: "h3")%>
-                <p class="productintro"><%= product.synopsis %></p>
-                </div>
-              </div>
+                
+
+              </a>
             <%end%>
             <%i+=1%>
           <%end%>
@@ -66,6 +64,25 @@
             
         </div>
     </div>
+    
+<div class="allcategory contain">
+    <h4>全部车型</h4>
+    <!--<p class="hotline">产品咨询热线 0755-36901041</p>-->
+    <br>
+    <hr>
+    <!--load db 的category into cell 有几个load 几个 需要图片和名字，-->
+    
+    <% @case_types.each do |category| %>
+      
+      <div class="cell">
+        <div class="categoryimg" style="background: url(<%= category.image%>);"></div>
+        <%= link_to category.name, case_type_path(category.id) %>
+      </div>
+    <%end%>
+</div>
+    
+    
+    
     
 
     

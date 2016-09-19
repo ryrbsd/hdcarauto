@@ -25,7 +25,7 @@ class CompanyNews < ActiveRecord::Base
     
     #rails admin set up
     rails_admin do
-        navigation_label '新闻'
+        navigation_label '新闻和活动'
         list do
           field :title do
             label "名称"

@@ -76,8 +76,13 @@
   </div>
   <span class="links">
     <a id="home" href="/">首页</a>
-   
-
+    <a id="products" href="/products_main">车型</a>
+    <a id="news" href="/news_page">新闻和活动</a>
+    <% if !current_user%>
+      <a id="login" href="/users/sign_in">登录</a>
+    <%else%>
+      <a id="login" href="/admin">后台</a>
+    <%end%>
   </span>
   
   <div class="mobile-nav">

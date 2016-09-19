@@ -77,7 +77,7 @@ body {
 
 .allcategory {
     width: 60%;
-    height: auto;
+    min-height: 500px;
     margin: auto;
     position: relative;
     top: 115px;
@@ -222,7 +222,8 @@ h6 {
 
 .text-field {
     width: 77%;
-    float: right;
+    float: left;
+    top: 50px;
     position: relative;
 }
 

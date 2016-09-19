@@ -2,30 +2,35 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    can :read, :all                   # allow everyone to read everything
+    can :read, CaseType # allow everyone to read everything
+    can :read, ServiceCase
+    can :read, CompanyNews
     if user && user.role != "user"
       can :access, :rails_admin       # only allow admin users to access Rails Admin
       can :dashboard                  # allow access to dashboard
-      if user.role == 'developer'
-        can :manage, :all             # allow superadmins to do anything
-      elsif user.role == 'superadmin'
-        can :manage, :all
-        cannot :edit, User do |people|
-          people.role == 'superadmin' && people != user
-        end
-      elsif user.role == 'admin'
-        # this is amazing!!!
-        if(user.authority)
-          model_list = ''
-          access_list = user.authority.split(',')
-          access_list.each do |k|
-            model_list += user.hashmap[k] 
-            model_list += ','
-          end
-          model_list = eval model_list.to_s.split(',').each {|n| n}.to_s.gsub('"', '')
-          can :manage, model_list
-        end
-      end
+      can :manage, CaseType # allow everyone to read everything
+      can :manage, ServiceCase
+      can :manage, CompanyNews 
+      # if user.role == 'developer'
+      #   can :manage, :all             # allow superadmins to do anything
+      # elsif user.role == 'superadmin'
+      #   can :manage, :all
+      #   cannot :edit, User do |people|
+      #     people.role == 'superadmin' && people != user
+      #   end
+      # elsif user.role == 'admin'
+      #   # this is amazing!!!
+      #   if(user.authority)
+      #     model_list = ''
+      #     access_list = user.authority.split(',')
+      #     access_list.each do |k|
+      #       model_list += user.hashmap[k] 
+      #       model_list += ','
+      #     end
+      #     model_list = eval model_list.to_s.split(',').each {|n| n}.to_s.gsub('"', '')
+      #     can :manage, model_list
+      #   end
+      # end
     end
   end
     

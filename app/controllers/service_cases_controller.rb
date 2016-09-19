@@ -14,7 +14,9 @@ class ServiceCasesController < ApplicationController
   # GET /service_cases/1
   # GET /service_cases/1.json
   def show
-    @service_case = ServiceCase.find(params[:id])
+    @paper = ServiceCase.find(params[:id])
+    @type = @paper.case_type
+    @papers = @type.service_cases
   end
 
   # GET /service_cases/new

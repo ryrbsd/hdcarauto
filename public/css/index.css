@@ -435,6 +435,39 @@ h15 {
     text-decoration: underline;
 }
 
+.categoryimg {
+    width:100%;
+    height: 90%;
+    background-size: contain !important;
+    display: inline-block;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+}
+
+h4 {
+    float: left;
+}
+
+
+.cell {
+    width: 40%;
+    height: 200px;
+    text-align: center;
+    margin: 0 4%;
+    margin-top: 30px;
+    position: relative;
+    display: inline-block;
+}
+
+.allcategory {
+    width: 60%;
+    min-height: 500px;
+    margin: auto;
+    position: relative;
+    top: 115px;
+    margin-bottom: 30px;
+}
+
 .item, .item.active {
     height: 100%;
     width: 100%;

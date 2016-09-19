@@ -11,12 +11,14 @@ class MainframeController < ApplicationController
     @products = Product.all
     @popproducts = PopProduct.limit(4).order('id desc')
     @company_news = CompanyNews.all.order("created_at desc").limit(8)
+    @case_types = CaseType.all
   end
   
   def products
     @products = Product.all
     @popproducts = PopProduct.limit(4).order('id desc')
     @categories = Category.all
+    @case_types = CaseType.all
   end
   
   def sitemap

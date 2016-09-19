@@ -19,6 +19,10 @@ class CaseTypesController < ApplicationController
   def show
     @case_types = CaseType.all
     @type = CaseType.find(params[:id])
+    @papers = @type.service_cases
+    if @papers.size >= 1
+      @firstpaper = @papers[0]
+    end
     if @type
       @cases = ServiceCase.where(:case_type_id => @type.id).paginate :page => params[:page],:per_page => 10
     end

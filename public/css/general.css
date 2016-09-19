@@ -32,6 +32,7 @@ body {
 
 .text-field {
     height: auto;
+    min-height: 800px;
 }
 
 .hr {
