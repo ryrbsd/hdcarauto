@@ -7,21 +7,21 @@ class ServiceCase < ActiveRecord::Base
   #set up rails admin
   rails_admin do
     parent CaseType
-    navigation_label '客户服务'
+    navigation_label '车型'
     list do 
       field :title do
         label "标题"
       end
       
       field :case_type_id, :enum do
-        label "案例类型"
+        label "车型"
         enum do
           ::CaseType.all.collect {|p| [p.name, p.id]}
         end
       end
       
       field :image, :carrierwave do
-        label "图片"
+        label "封面图片"
       end
       
       field :attachment, :carrierwave do
@@ -39,14 +39,14 @@ class ServiceCase < ActiveRecord::Base
       end
       
       field :case_type_id, :enum do
-        label "案例类型"
+        label "车型选择"
         enum do
           ::CaseType.all.collect {|p| [p.name, p.id]}
         end
       end
       
       field :image, :carrierwave do
-        label "图片"
+        label "封面图片"
       end
       
       field :attachment, :carrierwave do

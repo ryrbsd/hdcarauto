@@ -47,6 +47,7 @@ class Bid < ActiveRecord::Base
           end
           field :attachment, :carrierwave do
             label "附件"
+            visible false
           end
           # field :send_email do
           #   label "发送邮件通知"
