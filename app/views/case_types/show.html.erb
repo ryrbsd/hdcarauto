@@ -22,10 +22,10 @@
 </div>
 <div class="rightproducts">
     <div class="title">
-        <h6><%= @firstpaper.title%></h6>
+        <h6><%= @firstpaper.title if @firstpaper%></h6>
         <hr class="righthr">
     </div>
-    <div class="text-field"><%= @firstpaper.text.html_safe%></div>
+    <div class="text-field"><%= @firstpaper.text.html_safe if @firstpaper%></div>
     
     
 </div>
