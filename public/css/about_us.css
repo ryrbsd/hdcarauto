@@ -520,6 +520,7 @@ h12 {
     top: 91px;
     height: auto;
     /*width: 68%;*/
+    min-height: 500px;
     margin: auto;
 }
 

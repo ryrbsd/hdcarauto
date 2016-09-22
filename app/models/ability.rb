@@ -12,6 +12,7 @@ class Ability
       can :manage, ServiceCase
       can :manage, CompanyNews 
       can :manage, PopProduct
+      can :manage, Bid
       # if user.role == 'developer'
       #   can :manage, :all             # allow superadmins to do anything
       # elsif user.role == 'superadmin'

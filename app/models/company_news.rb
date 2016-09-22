@@ -30,9 +30,7 @@ class CompanyNews < ActiveRecord::Base
           field :title do
             label "名称"
           end
-          field :author do
-            label "作者"
-          end
+
           field :description do
             label "梗概"
           end
@@ -54,9 +52,9 @@ class CompanyNews < ActiveRecord::Base
             label "名称"
             required true
           end
-          field :author do
-            label "作者"
-          end
+          # field :author do
+          #   label "作者"
+          # end
           field :description, :text do
             label "梗概"
             html_attributes do
@@ -66,9 +64,9 @@ class CompanyNews < ActiveRecord::Base
           field :content, :ck_editor do
             label "内容"
           end
-          field :video_url do
-            label "视频链接"
-          end
+          # field :video_url do
+          #   label "视频链接"
+          # end
           field :image, :carrierwave do
             label "封面"
           end

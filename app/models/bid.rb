@@ -17,40 +17,40 @@ class Bid < ActiveRecord::Base
     
     #set up rails admin
     rails_admin do
-        navigation_label '投标'
+        navigation_label '地址'
         weight +1
         list do 
           #title
           field :position do
-            label "招标项目"
+            label "店名"
           end
-          field :department do
-            label "部门"
-          end
-          field :deadline do
-            label "截止日期"
-          end
+          # field :department do
+          #   label "部门"
+          # end
+          # field :deadline do
+          #   label "截止日期"
+          # end
         end
         edit do
           field :position do
-            label "招标项目"
+            label "店名"
             required true 
           end
-          field :department do
-            label "部门"
-          end
-          field :deadline do
-            label "截止日期"
-          end
+          # field :department do
+          #   label "部门"
+          # end
+          # field :deadline do
+          #   label "截止日期"
+          # end
           field :description, :ck_editor do
-            label "简介"
+            label "地址详细"
           end
           field :attachment, :carrierwave do
             label "附件"
           end
-          field :send_email do
-            label "发送邮件通知"
-          end
+          # field :send_email do
+          #   label "发送邮件通知"
+          # end
         end
     end
 end

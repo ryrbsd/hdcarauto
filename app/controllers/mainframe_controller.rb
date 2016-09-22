@@ -10,7 +10,7 @@ class MainframeController < ApplicationController
   def index
     @products = Product.all
     @popproducts = PopProduct.limit(4).order('id desc')
-    @company_news = CompanyNews.all.order("created_at desc").limit(8)
+    @company_news = CompanyNews.all.order("created_at desc").limit(4)
     @case_types = CaseType.all
   end
   
