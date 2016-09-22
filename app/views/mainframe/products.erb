@@ -17,7 +17,7 @@
     <% @case_types.each do |category| %>
       
       <div class="cell">
-        <div class="categoryimg" style="background: url(<%= category.image%>);"></div>
+        <a class="categoryimg" href="case_types/<%= category.id%>" style="background: url(<%= category.image%>);"></a>
         <%= link_to category.name, case_type_path(category.id) %>
       </div>
     <%end%>

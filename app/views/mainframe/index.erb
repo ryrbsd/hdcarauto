@@ -61,7 +61,7 @@
             <ul class="indexnews current" id='1'>
                 <% @company_news.each do |news|%>
                 <li>
-                    <div class="special-img-two" style="background: url(<%= news.image%>);"></div>
+                    <a href="news/showcompanynews?id=<%= news.id%>" class="special-img-two" style="background: url(<%= news.image%>);"></a>
                     <%= link_to(news.title, showcompanynews_news_index_path(:id => news.id), class: "special-title")%>
                     <p class="special-p"><%= news.description%></p>
                 </li>
@@ -82,7 +82,7 @@
     <% @case_types.each do |category| %>
       
       <div class="cell">
-        <div class="categoryimg" style="background: url(<%= category.image%>);"></div>
+        <a href="case_types/<%= category.id%>" class="categoryimg" style="background: url(<%= category.image%>);"></a>
         <%= link_to category.name, case_type_path(category.id) %>
       </div>
     <%end%>
