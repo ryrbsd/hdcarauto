@@ -124,7 +124,7 @@ body {
 
 .leftmenu {
     position: relative;
-    height: 1500px;
+    min-height: 4000px;
     top: 90px;
     width: 11.4%;
     left: 20%;
